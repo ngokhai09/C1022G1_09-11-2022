@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="">So tien can chuyen</label>
+        <input type="text" id="money">
+    </div>
+    <div>
+        <label for="">Chuyển từ</label>
+        <select id="curr">
+            <option value="1">VND</option>
+            <option value="23000">USD</option>
+            <option value="150">Yên</option>
+        </select>
+    </div>
+    <div>
+        <label for="">Sang</label>
+        <select id="des">
+            <option value="1">VND</option>
+            <option value="23000">USD</option>
+            <option value="150">Yên</option>
+        </select>
+    </div>
+    <div>
+        <button onclick="convert()">Chuyển</button>
+    </div>
+    <div>
+        <label for="">Số tiền sau chuyển</label>
+        <input type="text" readonly id="result">
+    </div>
+</body>
+<script>
+    function convert(){
+        let money = +document.getElementById('money').value;
+        let curr = +document.getElementById('curr').value;
+        let des = +document.getElementById('des').value;
+        let result = money * curr / des;
+        document.getElementById('result').value = result;
+    }
+</script>
+</html>
