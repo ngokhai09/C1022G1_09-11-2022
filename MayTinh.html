@@ -47,18 +47,23 @@
 </body>
 <script>
     function add(value){
+        // Đọc value từ ô input
         let result = document.getElementById('result').value;
+        // Thêm giá trị mới vào cuối chuỗi của ô input
         result += value;
+        // Gán lại giá trị mới cho ô input
         document.getElementById('result').value = result;
     }
     function delete1(){
+        // Gán lại giá trị rỗng cho ô input
         document.getElementById('result').value = '';
     }
     function calculate(){
+        
         let result = document.getElementById('result').value;
+        // Tính toán biểu thức result đã lấy ở ô input
         let res = eval(result);
         document.getElementById('result').value = res;
-
     }
 </script>
 </html>
